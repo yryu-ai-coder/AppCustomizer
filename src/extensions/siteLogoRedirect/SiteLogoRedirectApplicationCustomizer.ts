@@ -13,8 +13,15 @@ export interface ISiteLogoRedirectApplicationCustomizerProperties {
 }
 
 // Containers that hold the modern SharePoint site header (logo + title area).
+// NOTE: this must NOT include #SuiteNavWrapper/#O365_NavHeader - that's the
+// tenant-level O365 suite bar (waffle + tenant logo), a different element that
+// happens to link to the same URL when the site is the root site collection.
 const HEADER_CONTAINER_SELECTOR: string =
-  '#spSiteHeader, #SuiteNavWrapper, [data-automationid="SiteHeader"], header[role="banner"]';
+  '#spSiteHeader, [data-automationid="SiteHeader"], header[role="banner"]';
+
+// The O365 suite bar (tenant logo, app launcher, search, etc.) - always excluded.
+const SUITE_BAR_SELECTOR: string =
+  '#SuiteNavWrapper, #O365_NavHeader, [id^="O365_"]';
 
 // Known data-automationid/class values used by SharePoint for the logo/title elements.
 // SharePoint's header markup changes across UI updates, so we match several known patterns.
@@ -50,6 +57,10 @@ export default class SiteLogoRedirectApplicationCustomizer
   private _onDocumentClick = (event: MouseEvent): void => {
     const target: HTMLElement | null = event.target as HTMLElement;
     if (!target) {
+      return;
+    }
+
+    if (target.closest(SUITE_BAR_SELECTOR)) {
       return;
     }
 
