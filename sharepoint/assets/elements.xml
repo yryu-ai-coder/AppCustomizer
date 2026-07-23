@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Title="SiteLogoRedirect"
+        Location="ClientSideExtension.ApplicationCustomizer"
+        ClientSideComponentId="70683975-c6a0-47f2-8697-0969493c659b"
+        ClientSideComponentProperties="{&quot;redirectUrl&quot;:&quot;https://www.microsoft.com&quot;,&quot;openInNewTab&quot;:false}">
+    </CustomAction>
+</Elements>

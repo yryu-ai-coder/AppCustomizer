@@ -1,0 +1,31 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://youngryu.sharepoint.com/SitePages/Site-Logo-Redirect.aspx",
+      "customActions": {
+        "70683975-c6a0-47f2-8697-0969493c659b": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "redirectUrl": "https://www.google.com",
+            "openInNewTab": false
+          }
+        }
+      }
+    },
+    "siteLogoRedirect": {
+      "pageUrl": "https://youngryu.sharepoint.com/SitePages/Site-Logo-Redirect.aspx",
+      "customActions": {
+        "70683975-c6a0-47f2-8697-0969493c659b": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "redirectUrl": "https://www.google.com",
+            "openInNewTab": false
+          }
+        }
+      }
+    }
+  }
+}

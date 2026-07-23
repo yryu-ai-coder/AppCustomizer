@@ -1,0 +1,20 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "useGulp": false,
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.22.3",
+    "sdksVersions": {},
+    "version": "1.23.0",
+    "libraryName": "my-spfx-project",
+    "libraryId": "76e5a1ae-5d34-4bec-85b3-d6fd3b28b6e0",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "my-spfx-project",
+    "solutionShortDescription": "my-spfx-project description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "extension",
+    "extensionType": "ApplicationCustomizer"
+  }
+}
